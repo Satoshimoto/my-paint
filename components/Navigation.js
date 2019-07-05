@@ -4,6 +4,10 @@ import "../scss/Navigation.scss";
 const Navigation = () => {
   return (
     <>
+      <header>
+        <nav>
+        </nav>
+      </header>
     </>
   );
 };
