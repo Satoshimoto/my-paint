@@ -7,7 +7,11 @@ class App extends React.Component {
   state = {
     activeTool: "pen",
     activeSize: 1,
-    activeColor: "color--black"
+    activeColor: "color--black",
+    canvasWidth: "",
+    canvasHeight: "",
+    created: false,
+    createStep: 0
   };
 
   handleActiveTool = e => {
