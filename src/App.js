@@ -24,11 +24,26 @@ class App extends React.Component {
       activeTool: e.currentTarget.classList[1]
     });
   };
+
+  handleActiveSize = e => {
+    if (e.currentTarget.value < 0) {
+      e.currentTarget.value = 1;
+    } else if (e.currentTarget.value > 30) {
+      e.currentTarget.value = 30;
+    } else if (e.currentTarget.value === "") {
+      e.currentTarget.value = 1;
+    }
+
+    this.setState({
+      activeSize: e.currentTarget.value
+    });
+  };
   render() {
     return (
       <>
         <Navigation
           setActiveTool={this.handleActiveTool}
+          setActiveSize={this.handleActiveSize}
         />
       </>
     );
