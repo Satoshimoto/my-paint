@@ -61,6 +61,57 @@ class App extends React.Component {
     });
   };
 
+  handleCreateCanvas = e => {
+    let container = document.querySelector(".container");
+
+    if (e.currentTarget.classList[0] === "add") {
+      this.setState({
+        createStep: 1
+      });
+    }
+    if (e.currentTarget.classList[0] === "container__properties--button") {
+      let width = document.querySelector(".width").value;
+      let height = document.querySelector(".height").value;
+
+      if (height === "") {
+        height = 50;
+      }
+
+      if (width === "") {
+        width = 50;
+      }
+
+      this.setState({
+        createStep: 0,
+        created: true,
+        canvasWidth: width + "px",
+        canvasHeight: height + "px"
+      });
+    }
+  };
+
+  handleCanvasDimensions = e => {
+    if (e.currentTarget.classList[1] === "width") {
+      if (e.currentTarget.value < 50) {
+        e.currentTarget.value = 50;
+      } else if (e.currentTarget.value > 2000) {
+        e.currentTarget.value = 2000;
+      }
+      this.setState({
+        canvasWidth: e.currentTarget.value
+      });
+    } else {
+      if (e.currentTarget.value < 50) {
+        e.currentTarget.value = 50;
+      } else if (e.currentTarget.value > 2000) {
+        e.currentTarget.value = 2000;
+      }
+      this.setState({
+        canvasHeight: e.currentTarget.value
+      });
+    }
+  };
+
   render() {
     return (
       <>
