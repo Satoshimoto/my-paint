@@ -1,0 +1,48 @@
+.header {
+  width: 15px;
+  min-height: 100vh;
+  height: auto;
+  background-color: #999;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  transition: 0.4s ease-in-out;
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -ms-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  overflow-y: scroll;
+
+  .header__grasper {
+    width: 30px;
+    height: 30px;
+    background-color: #999;
+    position: fixed;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+    -webkit-transform: translate(0%, -50%);
+    -moz-transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%);
+    -o-transform: translate(0%, -50%);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: 0.4s ease-in-out;
+    -webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -ms-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    .header__grasper--arrow {
+      position: absolute;
+      color: white;
+    }
+  }
+}
