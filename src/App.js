@@ -120,7 +120,12 @@ class App extends React.Component {
           setActiveSize={this.handleActiveSize}
           setActiveColor={this.handleActiveColor}
         />
-        <Canvas />
+        <Canvas
+          step={this.state.createStep}
+          create={this.handleCreateCanvas}
+          created={this.state.created}
+          setDimensions={this.handleCanvasDimensions}
+        />
       </>
     );
   }
