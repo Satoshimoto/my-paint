@@ -6,7 +6,7 @@ class App extends React.Component {
   state = {
     activeTool: "pen",
     activeSize: 1,
-    activeColor: []
+    activeColor: "color--black"
   };
 
   handleActiveTool = e => {
