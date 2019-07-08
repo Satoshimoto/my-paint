@@ -7,11 +7,28 @@ class App extends React.Component {
     activeTool: "pen",
     activeSize: 1,
     activeColor: []
- }
+  };
+
+  handleActiveTool = e => {
+    let tools = document.querySelectorAll(".navigation__tools .tool");
+    tools = [...tools];
+    tools.forEach(item => {
+      if (item === e.currentTarget) {
+        item.style.backgroundColor = "lightgray";
+      } else {
+        item.style.backgroundColor = "";
+      }
+    });
+
+    this.setState({
+      activeTool: e.currentTarget.classList[1]
+    });
+  };
   render() {
     return (
       <>
         <Navigation
+          setActiveTool={this.handleActiveTool}
         />
       </>
     );
