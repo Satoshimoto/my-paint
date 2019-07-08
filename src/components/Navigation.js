@@ -57,6 +57,51 @@ const Navigation = props => {
               <i className="fas fa-pencil-alt" />
             </li>
           </ul>
+          <div className="navigation__properties">
+            <div className="properties__size">
+              <h4 className="size--header">Size:</h4>
+              <input
+                className="size--input"
+                type="number"
+                min="1"
+                max="30"
+                placeholder="1px"
+                onChange={e => props.setActiveSize(e)}
+              />
+            </div>
+            <div className="properties__colors">
+              <h4 className="colors--header">Colors:</h4>
+              <div
+                className="color color--blue"
+                onClick={e => props.setActiveColor(e)}
+              />
+              <div
+                className="color color--green"
+                onClick={e => props.setActiveColor(e)}
+              />
+              <div
+                className="color color--yellow"
+                onClick={e => props.setActiveColor(e)}
+              />
+              <div
+                className="color color--black"
+                onClick={e => props.setActiveColor(e)}
+                style={{ boxShadow: "0px 0px 10px 5px white" }}
+              />
+              <div
+                className="color color--orange"
+                onClick={e => props.setActiveColor(e)}
+              />
+              <div
+                className="color color--red"
+                onClick={e => props.setActiveColor(e)}
+              />
+              <div
+                className="color color--white"
+                onClick={e => props.setActiveColor(e)}
+              />
+            </div>
+          </div>
         </nav>
       </header>
     </>
