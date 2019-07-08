@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Navigation from "./components/Navigation";
+import Canvas from "./components/Canvas";
 
 class App extends React.Component {
   state = {
@@ -64,6 +65,7 @@ class App extends React.Component {
           setActiveSize={this.handleActiveSize}
           setActiveColor={this.handleActiveColor}
         />
+        <Canvas />
       </>
     );
   }
