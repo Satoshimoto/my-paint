@@ -53,4 +53,140 @@
       color: white;
     }
   }
+
+  .navigation {
+    width: 90%;
+    padding: 5%;
+    display: block;
+    padding-top: 50px;
+    position: relative;
+
+    .navigation__tools {
+      padding-left: 0px;
+      list-style-type: none;
+      display: none;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .tool {
+        flex-basis: 30px;
+        height: 30px;
+        margin: 5% 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+    }
+
+    .navigation__properties {
+      width: 100%;
+      border-top: 1px solid black;
+      margin-top: 40px;
+      display: none;
+
+      .properties__size {
+        width: 100%;
+        border-bottom: 1px solid black;
+
+        .size--header {
+          padding-left: 10px;
+          display: inline-block;
+        }
+
+        .size--input {
+          display: inline-block;
+          margin-left: 10px;
+          width: 35px;
+          height: 18px;
+          padding-left: 5px;
+          background-color: #ddd;
+          border: 0px solid;
+        }
+      }
+
+      .properties__colors {
+        display: flex;
+        flex-basis: 100%;
+        flex-wrap: wrap;
+        border-bottom: 1px solid black;
+        padding-bottom: 30px;
+
+        .colors--header {
+          flex-basis: 100%;
+          padding-left: 10px;
+          margin: 30px 0px 15px 0px;
+        }
+
+        .color--blue {
+          @include colorSquare();
+          background-color: blue;
+        }
+
+        .color--green {
+          @include colorSquare();
+          background-color: green;
+        }
+
+        .color--yellow {
+          @include colorSquare();
+          background-color: yellow;
+        }
+
+        .color--black {
+          @include colorSquare();
+          background-color: black;
+        }
+
+        .color--orange {
+          @include colorSquare();
+          background-color: orange;
+        }
+
+        .color--red {
+          @include colorSquare();
+          background-color: red;
+        }
+
+        .color--white {
+          @include colorSquare();
+          background-color: white;
+        }
+      }
+    }
+  }
+}
+
+@keyframes grasperOpen {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+  }
+}
+
+@keyframes grasperClose {
+  0% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
 }
