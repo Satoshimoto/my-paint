@@ -38,12 +38,31 @@ class App extends React.Component {
       activeSize: e.currentTarget.value
     });
   };
+
+  handleActiveColor = e => {
+    let colors = document.querySelectorAll(".properties__colors .color");
+    colors = [...colors];
+
+    colors.forEach(item => {
+      if (item === e.currentTarget) {
+        item.style.boxShadow = "0px 0px 10px 5px white";
+      } else {
+        item.style.boxShadow = "0px 0px 0px 0px";
+      }
+    });
+
+    this.setState({
+      activeColor: e.currentTarget.classList[1]
+    });
+  };
+
   render() {
     return (
       <>
         <Navigation
           setActiveTool={this.handleActiveTool}
           setActiveSize={this.handleActiveSize}
+          setActiveColor={this.handleActiveColor}
         />
       </>
     );
