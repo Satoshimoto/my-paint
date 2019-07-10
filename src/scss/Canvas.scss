@@ -62,6 +62,58 @@
         }
     }
 
+    .container__clearBtn {
+        position: absolute;
+        top: 20px;
+        right: 410px;
+        z-index: 20;
+        font-weight: bold;
+        background-color: lightgray;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        transition: 0.4s;
+        -webkit-transition: 0.4s;
+        -moz-transition: 0.4s;
+        -ms-transition: 0.4s;
+        -o-transition: 0.4s;
+    }
+
+    .container__clearBtn:hover {
+        background-color: rgb(58, 109, 175);
+        color: white;
+    }
+
+    .container__deleteBtn {
+        position: absolute;
+        top: 20px;
+        right: 230px;
+        z-index: 20;
+        font-weight: bold;
+        background-color: rgb(184, 28, 28);
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        transition: 0.4s;
+        -webkit-transition: 0.4s;
+        -moz-transition: 0.4s;
+        -ms-transition: 0.4s;
+        -o-transition: 0.4s;
+    }
+
+    .container__deleteBtn:hover {
+        background-color: rgb(245, 27, 27);
+    }
+
     .container__create {
         width: 40%;
         height: 50%;
