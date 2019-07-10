@@ -1,12 +1,17 @@
 import React from "react";
 import "./App.css";
 import Navigation from "./components/Navigation";
+import Canvas from "./components/Canvas";
 
 class App extends React.Component {
   state = {
     activeTool: "pen",
     activeSize: 1,
-    activeColor: "color--black"
+    activeColor: "color--black",
+    canvasWidth: "",
+    canvasHeight: "",
+    created: false,
+    createStep: 0
   };
 
   handleActiveTool = e => {
@@ -56,6 +61,41 @@ class App extends React.Component {
     });
   };
 
+  handleCreateCanvas = e => {
+    if (e.currentTarget.classList[0] === "add") {
+      this.setState({
+        createStep: 1
+      });
+    }
+    if (e.currentTarget.classList[0] === "container__properties--button") {
+      let width = document.querySelector(".width").value;
+      let height = document.querySelector(".height").value;
+
+      if (height === "") {
+        height = 10;
+      } else if (height < 10) {
+        height = 10;
+      } else if (height > 2000) {
+        height = 2000;
+      }
+
+      if (width === "") {
+        width = 10;
+      } else if (width < 10) {
+        width = 10;
+      } else if (width > 2000) {
+        width = 2000;
+      }
+
+      this.setState({
+        createStep: 0,
+        created: true,
+        canvasWidth: width + "px",
+        canvasHeight: height + "px"
+      });
+    }
+  };
+
   render() {
     return (
       <>
@@ -63,6 +103,17 @@ class App extends React.Component {
           setActiveTool={this.handleActiveTool}
           setActiveSize={this.handleActiveSize}
           setActiveColor={this.handleActiveColor}
+        />
+        <Canvas
+          step={this.state.createStep}
+          create={this.handleCreateCanvas}
+          created={this.state.created}
+          setDimensions={this.handleCanvasDimensions}
+          canvasWidth={this.state.canvasWidth}
+          canvasHeight={this.state.canvasHeight}
+          activeTool={this.state.activeTool}
+          activeSize={this.state.activeSize}
+          activeColor={this.state.activeColor}
         />
       </>
     );

@@ -20,6 +20,7 @@
   -ms-transition: 0.4s ease-in-out;
   -o-transition: 0.4s ease-in-out;
   overflow-y: scroll;
+  z-index: 20;
 
   .header__grasper {
     width: 30px;
@@ -165,6 +166,7 @@
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
@@ -182,6 +184,7 @@
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
   }
+
   100% {
     transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
