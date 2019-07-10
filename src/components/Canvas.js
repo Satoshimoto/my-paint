@@ -22,6 +22,15 @@ const Canvas = props => {
     }
   }
 
+  function handleClearCanvas() {
+    let canvas = document.querySelector(".canvas");
+    let ctx = canvas.getContext("2d");
+
+    ctx.beginPath();
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.closePath();
+  }
+
   return (
     <>
       <div className="container">
