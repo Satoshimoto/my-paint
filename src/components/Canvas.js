@@ -57,6 +57,15 @@ const Canvas = props => {
                 placeholder="10px - 2000px"
               />
             </div>
+
+            <div className="container__properties">
+              <p className="container__properties"> Canvas background color:</p>
+              <select name="bcgList">
+                <option value="black">Black</option>
+                <option value="white">White</option>
+              </select>
+            </div>
+
             <p className="warning">
               You have to set size of canvas. Minium size is 10px, maximum size
               is 2000px
