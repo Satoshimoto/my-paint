@@ -46,8 +46,8 @@ const Navigation = props => {
             <li className="tool f-circle" onClick={e => props.setActiveTool(e)}>
               <i className="fas fa-circle" />
             </li>
-            <li className="tool star" onClick={e => props.setActiveTool(e)}>
-              <i className="far fa-star" />
+            <li className="tool rubber" onClick={e => props.setActiveTool(e)}>
+              <i className="fas fa-eraser" />
             </li>
             <li
               className="tool pen"
