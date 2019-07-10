@@ -42,23 +42,24 @@ const Canvas = props => {
               <p>Canvas Width:</p>
               <input
                 type="number"
-                min="50"
                 max="2000"
                 className="container__properties--input width"
-                onChange={e => props.setDimensions(e)}
+                placeholder="10px - 2000px"
               />
             </div>
             <div className="container__properties">
               <p className="container__properties"> Canvas Height:</p>
               <input
                 type="number"
-                min="50"
                 max="2000"
                 className="container__properties--input height"
-                onChange={e => props.setDimensions(e)}
+                placeholder="10px - 2000px"
               />
             </div>
-
+            <p className="warning">
+              You have to set size of canvas. Minium size is 10px, maximum size
+              is 2000px
+            </p>
             <div
               className="container__properties--button"
               onClick={e => props.create(e)}
