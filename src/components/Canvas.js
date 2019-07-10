@@ -60,9 +60,9 @@ const Canvas = props => {
 
             <div className="container__properties">
               <p className="container__properties"> Canvas background color:</p>
-              <select name="bcgList">
-                <option value="black">Black</option>
+              <select name="bcgList" onChange={props.changeBackground}>
                 <option value="white">White</option>
+                <option value="black">Black</option>
               </select>
             </div>
 
@@ -86,6 +86,7 @@ const Canvas = props => {
             activeTool={props.activeTool}
             activeColor={props.activeColor}
             activeSize={props.activeSize}
+            background={props.background}
           />
         ) : null}
       </div>
