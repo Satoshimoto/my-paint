@@ -109,6 +109,11 @@ class App extends React.Component {
           create={this.handleCreateCanvas}
           created={this.state.created}
           setDimensions={this.handleCanvasDimensions}
+          canvasWidth={this.state.canvasWidth}
+          canvasHeight={this.state.canvasHeight}
+          activeTool={this.state.activeTool}
+          activeSize={this.state.activeSize}
+          activeColor={this.state.activeColor}
         />
       </>
     );
