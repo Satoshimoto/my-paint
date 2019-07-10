@@ -117,6 +117,7 @@ class Blackboard extends React.Component {
           onMouseDown={e => this.handleClick(e)}
           onMouseUp={this.handleMouseUp}
           onMouseMove={e => this.handleDrawing(e)}
+          style={{ background: `${this.props.background}` }}
         />
       </>
     );
