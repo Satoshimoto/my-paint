@@ -1,5 +1,6 @@
 import React from "react";
 import "../scss/Canvas.scss";
+import Blackboard from "./Blackboard";
 
 const Canvas = props => {
   function handleSwitchMode() {
@@ -67,6 +68,16 @@ const Canvas = props => {
               <p>Create</p>
             </div>
           </div>
+        ) : null}
+
+        {props.created ? (
+          <Blackboard
+            width={props.canvasWidth}
+            height={props.canvasHeight}
+            activeTool={props.activeTool}
+            activeColor={props.activeColor}
+            activeSize={props.activeSize}
+          />
         ) : null}
       </div>
     </>
