@@ -106,6 +106,16 @@ class App extends React.Component {
     });
   };
 
+  handleDeleteCanvas = () => {
+    this.setState({
+      created: false,
+      createStep: 0,
+      canvasWidth: "",
+      canvasHeight: "",
+      background: "white"
+    });
+  };
+
   render() {
     return (
       <>
@@ -125,6 +135,7 @@ class App extends React.Component {
           activeColor={this.state.activeColor}
           changeBackground={this.handleChangeBackground}
           background={this.state.backgroundColor}
+          deleteCanvas={this.handleDeleteCanvas}
         />
       </>
     );
