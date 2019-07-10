@@ -38,6 +38,16 @@ const Canvas = props => {
         <div className="switch" onClick={handleSwitchMode}>
           <span className="switch--mode" />
         </div>
+        {props.created ? (
+          <>
+            <div className="container__clearBtn" onClick={handleClearCanvas}>
+              Clear canvas
+            </div>
+            <div className="container__deleteBtn" onClick={props.deleteCanvas}>
+              <i className="far fa-trash-alt" /> Delete canvas
+            </div>
+          </>
+        ) : null}
 
         {props.step === 0 && !props.created ? (
           <div className="container__create">
