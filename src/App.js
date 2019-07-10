@@ -11,7 +11,8 @@ class App extends React.Component {
     canvasWidth: "",
     canvasHeight: "",
     created: false,
-    createStep: 0
+    createStep: 0,
+    backgroundColor: "white"
   };
 
   handleActiveTool = e => {
@@ -96,6 +97,15 @@ class App extends React.Component {
     }
   };
 
+  handleChangeBackground = () => {
+    let select = document.querySelector("select");
+    let value = select.value;
+
+    this.setState({
+      backgroundColor: select.value
+    });
+  };
+
   render() {
     return (
       <>
@@ -108,12 +118,13 @@ class App extends React.Component {
           step={this.state.createStep}
           create={this.handleCreateCanvas}
           created={this.state.created}
-          setDimensions={this.handleCanvasDimensions}
           canvasWidth={this.state.canvasWidth}
           canvasHeight={this.state.canvasHeight}
           activeTool={this.state.activeTool}
           activeSize={this.state.activeSize}
           activeColor={this.state.activeColor}
+          changeBackground={this.handleChangeBackground}
+          background={this.state.backgroundColor}
         />
       </>
     );
