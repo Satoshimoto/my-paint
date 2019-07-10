@@ -75,7 +75,7 @@ class Blackboard extends React.Component {
       ctx.arc(mouseX, mouseY, activeSize, 0, 2 * Math.PI);
       ctx.fill();
       ctx.closePath();
-    } else if (activeTool === "star") {
+    } else if (activeTool === "rubber") {
       this.setState({
         clicked: true
       });
@@ -103,6 +103,8 @@ class Blackboard extends React.Component {
         ctx.beginPath();
         ctx.fillRect(mouseX, mouseY, activeSize, activeSize);
         ctx.closePath();
+      } else if (activeTool === "rubber") {
+        ctx.clearRect(mouseX, mouseY, activeSize, activeSize);
       }
     }
   };
