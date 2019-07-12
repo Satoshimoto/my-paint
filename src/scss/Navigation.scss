@@ -7,7 +7,7 @@
 }
 
 .header {
-  width: 15px;
+  width: 200px;
   min-height: 100vh;
   height: auto;
   background-color: #999;
@@ -28,7 +28,7 @@
     background-color: #999;
     position: fixed;
     top: 50%;
-    left: 0%;
+    left: 180px;
     transform: translate(0%, -50%);
     -webkit-transform: translate(0%, -50%);
     -moz-transform: translate(0%, -50%);
@@ -52,6 +52,7 @@
     .header__grasper--arrow {
       position: absolute;
       color: white;
+      transform: rotate(180deg);
     }
   }
 
@@ -65,7 +66,7 @@
     .navigation__tools {
       padding-left: 0px;
       list-style-type: none;
-      display: none;
+      display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
 
@@ -84,7 +85,7 @@
       width: 100%;
       border-top: 1px solid black;
       margin-top: 40px;
-      display: none;
+      display: "block";
 
       .properties__size {
         width: 100%;
@@ -93,6 +94,7 @@
         .size--header {
           padding-left: 10px;
           display: inline-block;
+          font-size: 20px;
         }
 
         .size--input {
@@ -117,6 +119,7 @@
           flex-basis: 100%;
           padding-left: 10px;
           margin: 30px 0px 15px 0px;
+          font-size: 20px;
         }
 
         .color--blue {
