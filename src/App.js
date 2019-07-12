@@ -34,8 +34,8 @@ class App extends React.Component {
   handleActiveSize = e => {
     if (e.currentTarget.value < 0) {
       e.currentTarget.value = 1;
-    } else if (e.currentTarget.value > 30) {
-      e.currentTarget.value = 30;
+    } else if (e.currentTarget.value > 50) {
+      e.currentTarget.value = 50;
     } else if (e.currentTarget.value === "") {
       e.currentTarget.value = 1;
     }
@@ -99,7 +99,6 @@ class App extends React.Component {
 
   handleChangeBackground = () => {
     let select = document.querySelector("select");
-    let value = select.value;
 
     this.setState({
       backgroundColor: select.value
