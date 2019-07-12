@@ -26,10 +26,27 @@ const Canvas = props => {
   function handleClearCanvas() {
     let canvas = document.querySelector(".canvas");
     let ctx = canvas.getContext("2d");
+    let saveBtn = document.querySelector(".downloadBtn");
+    saveBtn.href = "";
 
     ctx.beginPath();
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.closePath();
+  }
+
+  function handleSaveCanvas(e) {
+    let canvas = document.querySelector(".canvas");
+    canvas.style.border = "0px solid";
+    let download = document.querySelector(".downloadBtn");
+
+    html2canvas(canvas).then(canvas => {
+      let image = canvas.toDataURL("image/png");
+      download.href = image;
+    });
+    canvas.style.border = "2px solid black";
+    setTimeout(() => {
+      download.click();
+    }, 500);
   }
 
   return (
