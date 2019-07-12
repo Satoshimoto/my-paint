@@ -34,7 +34,7 @@ const Canvas = props => {
     ctx.closePath();
   }
 
-  function handleSaveCanvas(e) {
+  function handleSaveCanvas() {
     let canvas = document.querySelector(".canvas");
     canvas.style.border = "0px solid";
     let download = document.querySelector(".downloadBtn");
@@ -49,12 +49,21 @@ const Canvas = props => {
     }, 500);
   }
 
+  function showInstruction() {
+    alert(
+      "Quick guide how to use my_paint. First step is to create new canvas. After that select tool which you prefer . Depends of tool there is a diferent usage. If you choose rubber or pen then you have to click right mouse button on canvas and moving your mouse. In other tools just click right mouse on canvas"
+    );
+  }
+
   return (
     <>
       <div className="container">
         <h3 className="container__header">Dark mode</h3>
         <div className="switch" onClick={handleSwitchMode}>
           <span className="switch--mode" />
+        </div>
+        <div className="container__info" onClick={showInstruction}>
+          <i className="fas fa-info" />
         </div>
         {props.created ? (
           <>
@@ -64,13 +73,17 @@ const Canvas = props => {
             <div className="container__deleteBtn" onClick={props.deleteCanvas}>
               <i className="far fa-trash-alt" /> Delete canvas
             </div>
-            <div
-              className="container__saveBtn"
-              onClick={e => handleSaveCanvas(e)}
-            >
+            <div className="container__saveBtn" onClick={handleSaveCanvas}>
               Save as png
             </div>
-            <a href="" download="my_paint.jpg" className="downloadBtn" />
+            <a
+              href="http://www.myfolio.pl/"
+              download="my_paint.jpg"
+              className="downloadBtn"
+              style={{ display: "none" }}
+            >
+              .
+            </a>
           </>
         ) : null}
 

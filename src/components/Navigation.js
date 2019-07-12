@@ -64,7 +64,7 @@ const Navigation = props => {
                 className="size--input"
                 type="number"
                 min="1"
-                max="30"
+                max="50"
                 placeholder="1px"
                 onChange={e => props.setActiveSize(e)}
               />
