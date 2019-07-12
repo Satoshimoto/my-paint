@@ -1,6 +1,7 @@
 import React from "react";
 import "../scss/Canvas.scss";
 import Blackboard from "./Blackboard";
+import html2canvas from "html2canvas";
 
 const Canvas = props => {
   function handleSwitchMode() {
@@ -46,6 +47,13 @@ const Canvas = props => {
             <div className="container__deleteBtn" onClick={props.deleteCanvas}>
               <i className="far fa-trash-alt" /> Delete canvas
             </div>
+            <div
+              className="container__saveBtn"
+              onClick={e => handleSaveCanvas(e)}
+            >
+              Save as png
+            </div>
+            <a href="" download="my_paint.jpg" className="downloadBtn" />
           </>
         ) : null}
 
