@@ -51,7 +51,7 @@ const Canvas = props => {
 
   function showInstruction() {
     alert(
-      "Quick guide how to use my_paint. First step is to create new canvas. After that select tool which you prefer . Depends of tool there is a diferent usage. If you choose rubber or pen then you have to click right mouse button on canvas and moving your mouse. In other tools just click right mouse on canvas"
+      "Quick guide how to use my_paint. First step is to create new canvas. After created canvas, select tool which you prefer. Each tool has different way of use. If you choose rubber or pen then you have to click right mouse button on canvas and moving your mouse. In other tools just click right mouse on canvas"
     );
   }
 
