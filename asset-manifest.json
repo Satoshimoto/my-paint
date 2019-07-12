@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/my-paint/static/css/main.49b8261b.chunk.css",
+    "main.js": "/my-paint/static/js/main.eada3406.chunk.js",
+    "main.js.map": "/my-paint/static/js/main.eada3406.chunk.js.map",
+    "runtime~main.js": "/my-paint/static/js/runtime~main.32a668f2.js",
+    "runtime~main.js.map": "/my-paint/static/js/runtime~main.32a668f2.js.map",
+    "static/js/2.17573368.chunk.js": "/my-paint/static/js/2.17573368.chunk.js",
+    "static/js/2.17573368.chunk.js.map": "/my-paint/static/js/2.17573368.chunk.js.map",
+    "index.html": "/my-paint/index.html",
+    "precache-manifest.7265a64eab9da4389bccdee206f0ebd6.js": "/my-paint/precache-manifest.7265a64eab9da4389bccdee206f0ebd6.js",
+    "service-worker.js": "/my-paint/service-worker.js",
+    "static/css/main.49b8261b.chunk.css.map": "/my-paint/static/css/main.49b8261b.chunk.css.map"
+  }
+}
